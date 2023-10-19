@@ -9,8 +9,12 @@ export default function Home() {
         <Navbar/>
         <Slide/>
         <h2 className='text-white text-4xl'> Top Quizzz </h2>
-        <div className='px-10 mt-10'>
-            <Card data ={ questionSet[0]  } />
+        <div className='px-10 mt-10 flex flex-wrap gap-6'>
+            {
+                questionSet.map(v=>{
+                        return <Card data ={ v  } />
+                })
+            }
         </div>
         
     </div>
