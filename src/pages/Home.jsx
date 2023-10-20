@@ -2,8 +2,10 @@ import React from 'react'
 import Navbar from '../Components/Navbar'
 import Slide from '../Components/Slide'
 import { questionSet } from '../data'
+
 import Card from '../Components/Card'
 export default function Home() {
+        
   return (
     <div>
         <Navbar/>
