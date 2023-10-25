@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { questionSet } from '../data';
+import {Quizdata} from '../App'
 import wrongmp3 from '../wrong.mp3'
 import correctmp3 from '../correct.mp3';
 
 export default function Quiz() {
+        const questionSet = useContext(Quizdata)
         const [course, setCourse] = useState({});
         const [counter, setCounter] = useState(0);
         const { quizId } = useParams();

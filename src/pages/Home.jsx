@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Navbar from '../Components/Navbar'
 import Slide from '../Components/Slide'
-import { questionSet } from '../data'
+
 
 import Card from '../Components/Card'
+import { Quizdata } from '../App'
 export default function Home() {
-        
+        const questionSet = useContext(Quizdata)
   return (
     <div>
         <Navbar/>
@@ -14,7 +15,7 @@ export default function Home() {
         <div className='px-10 mt-10 flex flex-wrap gap-6'>
             {
                 questionSet.map(v=>{
-                        return <Card data ={ v  } />
+                        return <Card key={v.id} data ={ v  } />
                 })
             }
         </div>
