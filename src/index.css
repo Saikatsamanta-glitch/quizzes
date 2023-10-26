@@ -1,8 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
-@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
-body{
-    background: #010713 !important;
-  }
+@import url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
+body {
+  background: #010713 !important;
+}
+.dflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* progress bar */
+.progress {
+  display: inline-block;
+  width: 400px;
+  height: 50px;
+  margin: 35px;
+  border-radius: 20px;
+  background: #f9f9f9;
+}
+
+.bar {
+  width: 0%;
+  height: 100%;
+  transition: width;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.36, 0.55, 0.63, 0.48);
+}
+
+.bars {
+  background-color: #ffe67c;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%238fe1e7' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+}

@@ -8,7 +8,7 @@ function App() {
         const [quizData, setquizData] = useState([]);
         useEffect(() => {
                 const fetchData = async () => {
-                        const response = await axios('http://localhost:5000/')
+                        const response = await axios.get('http://localhost:5000/')
                         setquizData(response.data)
                 }
                 fetchData()
